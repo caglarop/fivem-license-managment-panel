@@ -73,7 +73,10 @@ export default function Page() {
                 </thead>
                 <tbody>
                   {data.licenses.map((lic: LicenseWithProduct, i: number) => (
-                    <tr className="bg-white/5 border-b border-white/5 hover:bg-white/10">
+                    <tr
+                      key={i}
+                      className="bg-white/5 border-b border-white/5 hover:bg-white/10"
+                    >
                       <th scope="row" className="px-6 py-4">
                         {lic.product?.name}
                       </th>

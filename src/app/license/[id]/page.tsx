@@ -57,7 +57,11 @@ export default function Page({ params }: { params: { id: string } }) {
         setSuccessMessage("IP Address updated successfully!");
 
         if (res?.license) {
-          setData({ ...data, ...res.license });
+          if (data) {
+            setData({ ...data, ...res.license });
+          } else {
+            setData({ ...res.license });
+          }
         }
       } else {
         if (res?.message === "24H_LOCK") {
@@ -96,7 +100,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
       setLoading(false);
     })();
-  }, [status]);
+  }, [status, params]);
 
   if (status === "loading" || status === "unauthenticated") {
     return <></>;

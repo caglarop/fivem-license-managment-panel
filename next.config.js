@@ -1,6 +1,11 @@
 /** @type {import("next").NextConfig} */
 const config = {
-  images: ["avatars.githubusercontent.com", "cdn.discordapp.com"],
+  images: {
+    domains: [
+      "https://avatars.githubusercontent.com",
+      "https://cdn.discordapp.com",
+    ],
+  },
 };
 
 module.exports = config;
