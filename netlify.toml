@@ -1,6 +1,7 @@
-{
-  "scripts": {
-    "build": "prisma generate && next build",
-    "start": "next start"
-  }
-}
+[build]
+  command = "npm run build"
+
+  functions = "functions/"
+
+  publish = "public/"
+  
