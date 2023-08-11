@@ -3,5 +3,5 @@
 import { DefaultLayout } from "@web/components/layouts/DefaultLayout";
 
 export default function Page() {
-  return <DefaultLayout>FAQ</DefaultLayout>;
+  return <h1>FAQ</h1>;
 }

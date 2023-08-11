@@ -3,7 +3,6 @@
 import { Prisma } from "@prisma/client";
 import { SquadButtonLink } from "@web/components/buttons/SquadButtonLink";
 import { SquareUpLeftIcon } from "@web/components/icons/SquareUpLeftIcon";
-import { DefaultLayout } from "@web/components/layouts/DefaultLayout";
 import { IpAddressSchema } from "@web/schema/IpAddress";
 
 import { useSession } from "next-auth/react";
@@ -107,7 +106,7 @@ export default function Page({ params }: { params: { id: string } }) {
   }
 
   return (
-    <DefaultLayout>
+    <div>
       <div className="max-w-6xl mx-auto">
         <div className="flex gap-4 items-center">
           <h1 className="flex-1 text-xl font-seibold">Edit</h1>
@@ -167,6 +166,6 @@ export default function Page({ params }: { params: { id: string } }) {
           </form>
         )}
       </div>
-    </DefaultLayout>
+    </div>
   );
 }

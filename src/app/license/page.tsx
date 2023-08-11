@@ -3,7 +3,6 @@
 import { Prisma } from "@prisma/client";
 import { SquadButtonLink } from "@web/components/buttons/SquadButtonLink";
 import { SettingIcon } from "@web/components/icons/SettingIcon";
-import { DefaultLayout } from "@web/components/layouts/DefaultLayout";
 
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
@@ -47,7 +46,7 @@ export default function Page() {
   }
 
   return (
-    <DefaultLayout>
+    <div>
       <h1 className="text-xl font-seibold">Licenses</h1>
 
       {isLoading ? (
@@ -95,6 +94,6 @@ export default function Page() {
           )}
         </div>
       )}
-    </DefaultLayout>
+    </div>
   );
 }
