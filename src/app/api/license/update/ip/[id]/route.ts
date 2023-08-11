@@ -3,6 +3,7 @@ import { authOptions } from "@web/lib/auth";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 import { calculateMinutesSinceUpdate } from "@web/utils/utils";
+import { IpAddressSchema } from "@web/schema/IpAddress";
 
 interface Params {
   id: string;
@@ -24,10 +25,18 @@ const handler = async (req: NextRequest, { params }: { params: Params }) => {
 
   const body = await req.json();
 
+  if (!id) {
+    return NextResponse.json({ success: false, message: "BAD_REQUEST" });
+  }
+
   const { ipAddress } = body;
 
-  if (!id || !ipAddress) {
-    return NextResponse.json({ success: false, message: "FORBIDDEN" });
+  if (!ipAddress) {
+    return NextResponse.json({ success: false, message: "INVALID_IP_ADDR" });
+  }
+
+  if (!IpAddressSchema.safeParse(ipAddress).success) {
+    return NextResponse.json({ success: false, message: "INVALID_IP_ADDR" });
   }
 
   const license = await prisma.license.findFirst({

@@ -13,7 +13,7 @@ export const Sidebar = () => {
   const { status } = useSession();
 
   return (
-    <div className="hidden md:block h-screen border-l border-[#5E5F74] w-[90px]">
+    <div className="hidden md:block h-vh w-[90px] overflow-auto border-l">
       <aside className="flex flex-col p-4 gap-4">
         <NavButtonLink href="/" active={pathName.length <= 1}>
           <HomeIcon />

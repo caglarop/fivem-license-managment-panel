@@ -47,7 +47,7 @@ export default function PageClient() {
 
   return (
     <div>
-      <h1 className="text-xl font-seibold">Licenses</h1>
+      <h1 className="text-3xl font-seibold">Your licenses</h1>
 
       {isLoading ? (
         <>Loading...</>
@@ -77,10 +77,20 @@ export default function PageClient() {
                       className="bg-white/5 border-b border-white/5 hover:bg-white/10"
                     >
                       <th scope="row" className="px-6 py-4">
-                        {lic.product?.name}
+                        <div className="bg-black/5 px-4 py-2 rounded inline-block">
+                          {lic.product?.name}
+                        </div>
                       </th>
-                      <td className="px-6 py-4">{lic.ipAddress}</td>
-                      <td className="px-6 py-4">{lic.key}</td>
+                      <td className="px-6 py-4">
+                        <div className="bg-black/5 px-4 py-2 rounded inline-block">
+                          {lic.ipAddress}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4">
+                        <div className="bg-black/5 px-4 py-2 rounded inline-block">
+                          {lic.key}
+                        </div>
+                      </td>
                       <td className="px-6 py-4 flex gap-4 justify-end">
                         <SquadButtonLink href={`/license/${lic.id}`}>
                           <SettingIcon />

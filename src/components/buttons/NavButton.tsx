@@ -16,8 +16,8 @@ export const NavButton: React.FC<NavButtonProps> = ({
     <button
       {...rest}
       className={clsx(
-        "rounded text-secondary hover:text-white aspect-square flex items-center justify-center w-[50px] h-[50px]",
-        active && "text-white"
+        "rounded text-gray-400 hover:text-black aspect-square flex items-center justify-center w-[50px] h-[50px]",
+        active && "!text-black"
       )}
     >
       {children}

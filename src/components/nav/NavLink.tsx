@@ -17,8 +17,8 @@ export const NavLink: React.FC<NavLinkProps> = ({
       {...rest}
       href={rest.href || ""}
       className={clsx(
-        active && "text-white",
-        "text-secondary hover:text-white",
+        "text-gray-400 hover:text-black",
+        active && "!text-black",
         className
       )}
     >

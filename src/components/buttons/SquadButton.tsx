@@ -17,8 +17,8 @@ export const SquadButton: React.FC<SquadButtonProps> = ({
     <button
       {...rest}
       className={clsx(
-        "rounded text-white bg-white/10 hover:text-black hover:bg-white aspect-square flex items-center justify-center w-[50px] h-[50px] p-3",
-        active && "bg-white text-black",
+        "rounded text-gray-400 hover:text-black aspect-square flex items-center justify-center w-[50px] h-[50px] p-3",
+        active && "!text-black",
         className
       )}
     >

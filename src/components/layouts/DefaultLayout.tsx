@@ -1,3 +1,4 @@
+import { Footer } from "../footer/Footer";
 import { Header } from "../header/Header";
 import { Navbar } from "../nav/Navbar";
 import { Sidebar } from "../sidebar/Sidebar";
@@ -20,10 +21,9 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
               </div>
             </div>
             <div>
-              <section>
-                <Header />
-              </section>
+              <Header />
               <section className="p-12">{children}</section>
+              <Footer />
             </div>
           </div>
         </div>

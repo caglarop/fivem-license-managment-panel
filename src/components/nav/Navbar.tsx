@@ -19,7 +19,7 @@ export const Navbar = () => {
       <div className="flex px-8 lg:px-12 mx-auto w-full">
         <div className="flex-1">
           <div>
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block text-black">
               <Logo />
             </Link>
           </div>
@@ -54,9 +54,7 @@ export const Navbar = () => {
                   )}
                 </div>
 
-                <div>
-                  {data?.user?.name} ({data?.user?.id})
-                </div>
+                <div>{data?.user?.email || data?.user?.name}</div>
               </NavLink>
             </>
           )}

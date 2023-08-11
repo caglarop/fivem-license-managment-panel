@@ -22,8 +22,8 @@ export const SquadButtonLink: React.FC<SquadButtonLinkProps> = ({
       {...rest}
       href={href}
       className={clsx(
-        "rounded text-white bg-white/10 hover:text-black hover:bg-white aspect-square flex items-center justify-center p-3 w-[50px] h-[50px]",
-        active && "bg-white text-black",
+        "rounded bg-black/5 text-gray-400 hover:text-black flex items-center justify-center p-3 w-[50px] h-[50px]",
+        active && "text-black",
         className
       )}
     >

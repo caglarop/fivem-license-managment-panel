@@ -40,8 +40,6 @@ export default function PageClient({ params }: { params: { id: string } }) {
 
     // Validate IP Address using Zod schema
     try {
-      IpAddressSchema.parse(ipAddress);
-
       const res = await fetch(`/api/license/update/ip/${params.id}`, {
         method: "POST",
         headers: {
@@ -69,6 +67,8 @@ export default function PageClient({ params }: { params: { id: string } }) {
           setError(
             `You have ${remainingMinutes} minutes left before you can perform this action again.`
           );
+        } else if (res?.message === "INVALID_IP_ADDR") {
+          setError("Invalid ip address.");
         } else {
           setError(res?.message || "Unknown error!");
         }
@@ -107,13 +107,19 @@ export default function PageClient({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto border p-6 rounded">
         <div className="flex gap-4 items-center">
-          <h1 className="flex-1 text-xl font-seibold">Edit</h1>
+          <h1 className="flex-1 text-3xl font-seibold">Edit</h1>
 
           <div className="">
-            <SquadButtonLink href="/license">
-              <SquareUpLeftIcon />
+            <SquadButtonLink
+              href="/license"
+              className="!flex !w-auto items-center justify-center gap-2"
+            >
+              <div className="w-3 h-3">
+                <SquareUpLeftIcon />
+              </div>
+              <div>Back</div>
             </SquadButtonLink>
           </div>
         </div>
@@ -132,7 +138,7 @@ export default function PageClient({ params }: { params: { id: string } }) {
               <p>{data?.key}</p>
             </div>
             {/* Display IP Address */}
-            <div className="mb-4 max-w-xl">
+            <div className="mb-4 max-w-xl grid gap-1">
               <label htmlFor="ipAddress" className="block font-medium">
                 IP Address
               </label>
@@ -152,7 +158,7 @@ export default function PageClient({ params }: { params: { id: string } }) {
 
             <button
               type="submit"
-              className={`px-4 py-2 bg-blue-500 text-white rounded-md ${
+              className={`px-6 py-3 bg-blue-500 text-white rounded-md ${
                 isFormLoading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={isFormLoading}
