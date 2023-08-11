@@ -6,7 +6,6 @@ import { NavLink } from "./NavLink";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
-import Image from "next/image";
 
 export const Navbar = () => {
   const pathName = usePathname();
