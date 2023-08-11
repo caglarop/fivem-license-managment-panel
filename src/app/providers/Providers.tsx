@@ -7,10 +7,10 @@ type Props = {
   children?: React.ReactNode;
 };
 
-export const Providers = ({ children }: Props) => {
+export default function Providers({ children }: Props): JSX.Element {
   return (
     <SessionProvider>
       <ThemeProvider>{children}</ThemeProvider>
     </SessionProvider>
   );
-};
+}

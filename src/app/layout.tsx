@@ -2,9 +2,9 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Providers } from "./providers/Providers";
 import { clsx } from "clsx";
 import { DefaultLayout } from "@web/components/layouts/DefaultLayout";
+import Providers from "./providers/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
