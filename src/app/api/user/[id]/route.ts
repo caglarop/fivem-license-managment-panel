@@ -1,8 +1,19 @@
 import { prisma } from "@web/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
-const handler = async (req: NextRequest) => {
-  const userId = req.nextUrl.searchParams.get("userId");
+interface Params {
+  userId: string;
+}
+
+// /api/license/[productName]/[licenseKey]
+const handler = async (req: NextRequest, { params }: { params: Params }) => {
+  // Check method
+  if (req.method !== "GET") {
+    return NextResponse.json({});
+  }
+
+  // Getting parameters
+  const { userId } = params;
 
   if (!userId) {
     return NextResponse.json({});
@@ -25,4 +36,4 @@ const handler = async (req: NextRequest) => {
   });
 };
 
-export { handler as GET, handler as POST };
+export { handler as GET };

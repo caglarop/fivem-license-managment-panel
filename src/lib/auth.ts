@@ -25,19 +25,10 @@ export const authOptions: NextAuthOptions = {
         session.user.id = user.id;
       }
 
-      console.log(`${process.env.NEXTAUTH_URL}/api/user?userId=${user.id}`);
-
       const userData = await fetch(
-        `${process.env.NEXTAUTH_URL}/api/user?userId=${user.id}`
+        `${process.env.NEXTAUTH_URL}/api/user/${user.id}`
       ).then((response) => response.json());
 
-      console.log({
-        ...session,
-        user: {
-          ...session.user,
-          isSuperAdmin: userData.isSuperAdmin,
-        },
-      });
       return {
         ...session,
         user: {

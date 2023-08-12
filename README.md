@@ -15,10 +15,10 @@ Explore the various API endpoints that drive the License Management Panel and in
 
 - **GET /api/license/[id]**: Retrieve license details and settings for a specific ID.
 - **GET /api/license/list**: List all available licenses.
-- **PUT /api/license/update/ip/[id]**: Update the IP address associated with a license.
+- **POST /api/license/update/ip/[id]**: Update the IP address associated with a license.
 - **GET /api/license-check/[productName]/[licenseKey]**: Verify the validity of a license key for a specific product.
 - **GET /api/session**: Check the authenticity of a user session.
-- **GET /api/user**: Retrieve user information, including ID, email, super admin status, name, and image.
+- **GET /api/user/[id]**: Retrieve user information, including ID, email, super admin status, name, and image.
 
 ## Getting Started
 
