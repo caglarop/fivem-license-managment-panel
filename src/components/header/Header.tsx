@@ -5,7 +5,7 @@ export const Header = () => {
         <div className="flex items-center">
           <div className="grid gap-2">
             <h1 className="text-4xl lg:text-6xl font-bold text-primary">
-              CMD Scripts
+              THEMOON-SCRIPTS
             </h1>
             <h1 className="text-2xl lg:text-4xl font-semibold">
               License Panel
