@@ -37,3 +37,7 @@ next-env.d.ts
 **/package-lock.json
 **/.next
 **/.env
+
+**/prisma/*.db
+**/prisma/*.sql
+**/prisma/migrations
