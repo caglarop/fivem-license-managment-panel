@@ -1,4 +1,4 @@
-## 📚 Table of Contents
+## Table of Contents
 
 - [FiveM License Management Panel - Next.js/React](#fivem-license-management-panel---nextjsreact)
 - [Features](#features)
@@ -11,18 +11,18 @@
 - [License](#license)
 - [Contribution](#contribution)
 
-# 🎮 FiveM License Management Panel - Next.js/React
+<h1 id="fivem-license-management-panel---nextjsreact">🎮 FiveM License Management Panel - Next.js/React</h1>
 
 This robust panel simplifies the management of script licenses for FiveM script vendors, enabling customers to tailor their licenses and configure IP addresses for FiveM servers.
 
-## 🌟 Features
+<h2 id="features">🌟 Features</h2>
 
 - **🔐 Discord Login**: Streamlined authentication through Discord.
 - **🔧 API Endpoints**: Comprehensive API endpoints for various functionalities.
 - **🔄 License Update**: Enable customers to update their IP addresses with 24h lock.
 - **🔒 Secure and Structured**: Built with Typescript for robustness and clarity.
 
-## 📡 API Endpoints
+<h2 id="api-endpoints">📡 API Endpoints</h2>
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -33,14 +33,14 @@ This robust panel simplifies the management of script licenses for FiveM script 
 | GET | /api/user/[id] | Retrieve user information, including ID, email, super admin status, name, and image. |
 | GET | /api/license-check/[productName]/[licenseKey] | Verify the validity of a license key for a specific product. |
 
-## 🚀 Getting Started
+<h2 id="getting-started">Getting Started 🚀</h2>
 
 Before you begin, ensure that you have met the following requirements:
 
 * You have installed the latest version of [Node.js and npm](https://nodejs.org/en/download/).
 * You have installed [Git](https://git-scm.com/downloads) on your machine.
 
-### 🛠️ Installation
+<h3 id="installation">Installation 🛠️</h3>
 
 1. Clone this repository:
    ```bash
@@ -59,7 +59,7 @@ Before you begin, ensure that you have met the following requirements:
    yarn install
    ```
 
-### ⚙️ Configuration
+<h3 id="configuration">Configuration ⚙️</h3>
 
 1. Copy the `.env.example` file and rename it to `.env`. Fill it with the necessary environment variables as per the provided settings.
 2. Run the following commands to migrate the database:
@@ -73,7 +73,7 @@ Before you begin, ensure that you have met the following requirements:
    yarn prisma migrate dev
    ```
 
-### 🎬 Starting
+<h3 id="starting">Starting 🎬</h3>
 
 To start the panel, run the following command:
 ```bash
@@ -85,7 +85,7 @@ yarn dev
 ```
 Then, access the panel at [http://localhost:3000](http://localhost:3000).
 
-## 🛡️ Setting Up Super Admin
+<h2 id="setting-up-super-admin">Setting Up Super Admin 🛡️</h2>
 
 To set yourself as a Super Admin, you can use Prisma Studio. Here are the steps:
 
@@ -110,9 +110,9 @@ Now, you have Super Admin privileges in the application.
 
 Please note: Be careful when assigning Super Admin privileges, as users with this role have extensive control over the application.
 
-## 📜 License
+<h2 id="license">License 📜</h2>
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contribution
+<h2 id="contribution">Contribution 🤝</h2>
 Contributions are welcome! If you have a feature request, bug report, or proposal for code improvement, please feel free to open an issue or submit a pull request.
