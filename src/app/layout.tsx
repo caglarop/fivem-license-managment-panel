@@ -9,8 +9,8 @@ import Providers from "./providers/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CMD Scripts | CMD-Scripts.com",
-  description: "CMD-Scripts.com",
+  title: "THEMOON Scripts | THEMOON-SCRIPTS.COM",
+  description: "THEMOON-SCRIPTS.COM",
 };
 
 export default function RootLayout({
