@@ -112,7 +112,7 @@ Please note: Be careful when assigning Super Admin privileges, as users with thi
 
 ## 📜 License
 
-This project is licensed under the MIT License. Refer to the "LICENSE" file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contribution
-For contribution and support, feel free to create issues or pull requests on GitHub.
+Contributions are welcome! If you have a feature request, bug report, or proposal for code improvement, please feel free to open an issue or submit a pull request.
