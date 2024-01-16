@@ -38,7 +38,6 @@ export default function PageClient({ params }: { params: { id: string } }) {
     setError(null);
     setSuccessMessage(null);
 
-    // Validate IP Address using Zod schema
     try {
       const res = await fetch(`/api/license/update/ip/${params.id}`, {
         method: "POST",
