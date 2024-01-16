@@ -1,6 +1,16 @@
-# 🎮 FiveM License Management Panel - Next.js/React
+# [🎮 FiveM License Management Panel - Next.js/React](#-fivem-license-management-panel---nextjsreact)
 
 This robust panel simplifies the management of script licenses for FiveM script vendors, enabling customers to tailor their licenses and configure IP addresses for FiveM servers.
+
+- [🌟 Features](#-features)
+- [📡 API Endpoints](#-api-endpoints)
+- [🚀 Getting Started](#-getting-started)
+  - [🛠️ Installation](#️-installation)
+  - [⚙️ Configuration](#️-configuration)
+  - [🎬 Starting](#-starting)
+- [🛡️ Setting Up Super Admin](#️-setting-up-super-admin)
+- [📜 License](#-license)
+- [🤝 Contribution](#-contribution)
 
 ## 🌟 Features
 
