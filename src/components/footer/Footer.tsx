@@ -6,14 +6,14 @@ export const Footer = () => {
     <footer className="border-t py-4 text-sm px-8 lg:px-12 grid lg:flex gap-4 items-center">
       <div className="flex-1">
         <span>
-          &copy; 2023 <a href="https://cmd-scripts.com">CMD-Scripts.com</a>. All
+          &copy; 2023 <a href="https://themoon-scripts.com">THEMOON-SCRIPTS.COM</a>. All
           rights reserved.
         </span>
       </div>
 
       <div className="text-end">
         <SquadButtonLink
-          href="https://discord.gg/GVjSqzRpqq"
+          href="https://discord.gg/XmyTusepyZ"
           target="_discord"
           className="!bg-[#7289da] !text-white !p-1.5 !h-8 !w-8"
         >
