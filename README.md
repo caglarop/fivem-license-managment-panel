@@ -72,6 +72,31 @@ yarn dev
 ```
 Then, access the panel at [http://localhost:3000](http://localhost:3000).
 
+## 🛡️ Setting Up Super Admin
+
+To set yourself as a Super Admin, you can use Prisma Studio. Here are the steps:
+
+1. Start Prisma Studio:
+   ```bash
+   npx prisma studio
+   ```
+   or if you prefer using Yarn:
+   ```bash
+   yarn prisma studio
+   ```
+
+2. Prisma Studio will open in your default web browser. Navigate to the `User` model.
+
+3. Find your user entry in the list and click on it to edit.
+
+4. Set the `isSuperAdmin` field to `true`.
+
+5. Click `Save` to apply the changes.
+
+Now, you have Super Admin privileges in the application.
+
+Please note: Be careful when assigning Super Admin privileges, as users with this role have extensive control over the application.
+
 ## 📜 License
 
 This project is licensed under the MIT License. Refer to the "LICENSE" file for more information.
