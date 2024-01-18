@@ -139,10 +139,11 @@ function checkLicense(licenseKey, callback)
     end, 'GET', '')
 end
 
--- Check license
+-- Example usage
 checkLicense(function(isAllowed)
     if isAllowed then
         print("License is valid!")
+        -- Continue your script logic here
     else
         print("License is not valid!")
         StopResource(GetCurrentResourceName())
