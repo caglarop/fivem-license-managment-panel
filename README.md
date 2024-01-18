@@ -110,6 +110,86 @@ Now, you have Super Admin privileges in the application.
 
 Please note: Be careful when assigning Super Admin privileges, as users with this role have extensive control over the application.
 
+<h2 id="api-usage-examples">API Usage Examples</h2>
+
+<h3 id="lua-usage">Lua Usage (FiveM)</h3>
+
+To verify the validity of a license key in a FiveM script, here's an example using a callback function:
+
+```lua
+function checkLicense(licenseKey, callback)
+    local productName = GetCurrentResourceName()
+    local url = "http://yourdomain.com/api/license-check/" .. productName .. "/" .. licenseKey
+
+    PerformHttpRequest(url, function(statusCode, responseText, headers)
+        if statusCode == 200 then
+            local responseData = json.decode(responseText)
+            if responseData and responseData.allowed then
+                if responseData.allowed == true then
+                    callback(true)
+                else
+                    callback(false)
+                end
+            else
+                callback(false)
+            end
+        else
+            callback(false)
+        end
+    end, 'GET', '')
+end
+
+-- Check license
+checkLicense(function(isAllowed)
+    if isAllowed then
+        print("License is valid!")
+    else
+        print("License is not valid!")
+        StopResource(GetCurrentResourceName())
+    end
+end)
+```
+
+Ensure you replace `"your_license_key_here"` with actual values relevant to your use case.
+
+<h3 id="javascript-usage">JavaScript Usage</h3>
+
+For general web applications or server-side scripts, here's how you can use the API in JavaScript:
+
+```javascript
+function checkLicense(licenseKey, callback) {
+    const productName = GetCurrentResourceName();
+    const url = `http://yourdomain.com/api/license-check/${productName}/${licenseKey}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.allowed) {
+                callback(true);
+            } else {
+                callback(false);
+            }
+        })
+        .catch(error => {
+            console.error("Error during API call:", error);
+            callback(false);
+        });
+}
+
+// Example usage
+checkLicense("your_license_key_here", function(isAllowed) {
+    if (isAllowed) {
+        console.log("License is valid!");
+        // Continue your script logic here
+    } else {
+        console.log("License is not valid.");
+        StopResource(GetCurrentResourceName());
+    }
+});
+```
+
+Ensure you replace `"your_license_key_here"` with actual values relevant to your use case.
+
 <h2 id="license">License 📜</h2>
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
