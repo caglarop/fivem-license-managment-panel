@@ -127,15 +127,12 @@ function checkLicense(licenseKey, callback)
             if responseData and responseData.allowed then
                 if responseData.allowed == true then
                     callback(true)
-                else
-                    callback(false)
+                    return
                 end
-            else
-                callback(false)
             end
-        else
-            callback(false)
         end
+
+        callback(false)
     end, 'GET', '')
 end
 
@@ -171,7 +168,6 @@ function checkLicense(licenseKey, callback) {
             }
         })
         .catch(error => {
-            console.error("Error during API call:", error);
             callback(false);
         });
 }
