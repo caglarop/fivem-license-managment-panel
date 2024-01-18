@@ -8,6 +8,9 @@
   - [Configuration](#configuration)
   - [Starting](#starting)
 - [Setting Up Super Admin](#setting-up-super-admin)
+- [API Usage Examples](#api-usage-examples)
+  - [Lua Usage (FiveM)](#lua-usage-fivem)
+  - [JavaScript Usage](#javascript-usage)
 - [License](#license)
 - [Contribution](#contribution)
 
